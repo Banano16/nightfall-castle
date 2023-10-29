@@ -1,0 +1,51 @@
+{
+    "nextPaletteID": 4,
+    "palettes": {
+        "custom0": {
+            "id": "custom0",
+            "name": "DawnBringer",
+            "colors": [
+                "#000000",
+                "#140C1C",
+                "#DEEEFF",
+                "#30346D",
+                "#4E4A4E",
+                "#854C30",
+                "#346524",
+                "#D04648",
+                "#757161",
+                "#597DCE",
+                "#D27D2C",
+                "#8595A1",
+                "#6DAA2C",
+                "#D2AA99",
+                "#6DC2CA",
+                "#DAD45E"
+            ],
+            "custom": true
+        },
+        "custom3": {
+            "id": "custom3",
+            "name": "Verda",
+            "colors": [
+                "#000000",
+                "#DEEEFF",
+                "#D04648",
+                "#D2AA99",
+                "#D27D2C",
+                "#DAD45E",
+                "#346524",
+                "#6DAA2C",
+                "#30346D",
+                "#597DCE",
+                "#8595A1",
+                "#757161",
+                "#4E4A4E",
+                "#D2AA99",
+                "#854C30",
+                "#140C1C"
+            ],
+            "custom": true
+        }
+    }
+}
