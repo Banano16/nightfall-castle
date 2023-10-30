@@ -843,7 +843,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     pauseUntil(() => pausa == true)
     if (libreS == 1) {
         libreS = 0
-        if (hitbox2.isHittingTile(CollisionDirection.Bottom) == true && controller.down.isPressed() == false || PlayerSprite.overlapsWith(movingplat)) {
+        if (hitbox2.isHittingTile(CollisionDirection.Bottom) == true && controller.down.isPressed() == false || hitbox2.overlapsWith(movingplat) == true) {
             salto = 0
             caida = 0
             hitbox2.vy = -250
@@ -4246,14 +4246,20 @@ game.onUpdate(function () {
 })
 forever(function () {
     if (hitbox2.overlapsWith(movingplat) && hitbox2.y < movingplat.y) {
+        hitbox2.y = movingplat.y - 55
         hitbox2.vy = 0
-        hitbox2.ay = 0
         hitbox2.vx = movingplat.vx
-        hitbox2.y = movingplat.y - 50
-        pauseUntil(() => hitbox2.overlapsWith(movingplat) == false)
-        if (hitbox2.isHittingTile(CollisionDirection.Bottom) == false) {
-            hitbox2.ay = 400
-            hitbox2.vx = 0
+        if (controller.A.isPressed()) {
+            timer.background(function () {
+                for (let index = 0; index < 4; index++) {
+                    pause(15)
+                    if (controller.A.isPressed() == true) {
+                        hitbox2.vy += 5
+                    } else {
+                        hitbox2.vy += 50
+                    }
+                }
+            })
         }
     }
 })
